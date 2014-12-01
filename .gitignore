@@ -1,0 +1,4 @@
+.vagrant
+chef/cookbooks
+chef/.librarian
+chef/tmp

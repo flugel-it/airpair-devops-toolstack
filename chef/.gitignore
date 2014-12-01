@@ -1,0 +1,5 @@
+.librarian
+nodes/*
+cookbooks/*
+.vagrant
+
