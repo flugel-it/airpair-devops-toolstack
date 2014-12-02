@@ -22,5 +22,9 @@ if app_path != "/vagrant"
   cookbook_file "/etc/init/factorial-api.conf" do
     source "factorial-api.conf"
   end
+
+  service "factorial-api" do
+    action [ :enable, :start ]
+  end
 end
 
