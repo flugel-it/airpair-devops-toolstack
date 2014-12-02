@@ -24,6 +24,7 @@ if app_path != "/vagrant"
   end
 
   service "factorial-api" do
+    provider Chef::Provider::Service::Upstart
     action [ :enable, :start ]
   end
 end
