@@ -1,3 +1,6 @@
+
+import sys
+
 from flask import Flask
 from flask.ext import restful
 
@@ -16,5 +19,9 @@ class Factorial(restful.Resource):
 api.add_resource(Factorial, '/factorial/<int:number>')
 
 if __name__ == '__main__':
+    if sys.argv[1] == "test":
+        factorial = Factorial()
+        assert(factorial.factorial(10) == 3628800)
+        sys.exit(0)
     app.run(debug=True, host='0.0.0.0')
 
