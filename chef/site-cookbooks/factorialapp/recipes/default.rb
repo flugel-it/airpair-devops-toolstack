@@ -7,9 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-begin
-  app_path = node[:factorialapp][:app_path]
-rescue
+app_path = "/opt/airpair-devops-toolstack"
+if not ::File.exists?(app_path)
   app_path = "/vagrant"
 end
 
